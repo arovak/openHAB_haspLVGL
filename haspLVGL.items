@@ -1,0 +1,45 @@
+Group HASP (House)
+
+/* Page Storage Items */
+
+Number HASP_Plate35_Page                            "HASP Plate 35 Page Select [%d]"                    (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Page"}
+Number HASP_Plate35_Page_Current                    "HASP Plate 35 Current Page [%.0f]"                 (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Page_Current", channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor_Page"}
+
+/* Plate Status Items */
+
+Switch HASP_Plate35_Light_Power                     "HASP Plate 35 Backlight Switch [%s]"               (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Light_Power"}
+Switch HASP_Plate35_Light_Status                    "HASP Plate 35 Backlight Status [%s]"               (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Light_Status"}
+Number HASP_Plate35_Light_Brightness                "HASP Plate 35 Backlight Brightness [%.0f]"         (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Light_Brightness"}
+Number HASP_Plate35_Light_Dimmer                    "HASP Plate 35 Backlight Brightness Set [%.0f]"     (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Light_Dimmer"}
+
+Switch HASP_Plate35_Plate_Status                    "HASP Plate 35 Connection Status [%s]"              (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Status"}
+Switch HASP_Plate35_Plate_Reboot                    "HASP Plate 35 Reboot [%s]"                         (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Reboot" , expire="2s,state=OFF" }
+String HASP_Plate35_Plate_Sensor                    "HASP Plate 35 Sensor [%s]"                         (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor"}
+String HASP_Plate35_Plate_Sensor_Status             "HASP Plate 35 Sensor - Status [%s]"                (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor_Status"}
+String HASP_Plate35_Plate_Sensor_ESPVersion         "HASP Plate 35 Sensor - ESP Version [%s]"           (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor_ESPVersion"}
+String HASP_Plate35_Plate_Sensor_ESPUpdate          "HASP Plate 35 Sensor - ESP Update Available [%s]"  (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor_ESPUpdate"}
+String HASP_Plate35_Plate_Sensor_ESPCore            "HASP Plate 35 Sensor - ESP Core [%s]"              (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor_ESPCore"}
+String HASP_Plate35_Plate_Sensor_SSID               "HASP Plate 35 Sensor - SSID[%s]"                   (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor_SSID"}
+String HASP_Plate35_Plate_Sensor_LCDVersion         "HASP Plate 35 Sensor - LCD Version [%s]"           (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor_LCDVersion"}
+// String HASP_Plate35_Plate_Sensor_LCDUpdate          "HASP Plate 35 Sensor - LCD Update Available [%s]"  (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor_LCDUpdate"}
+Number HASP_Plate35_Plate_Sensor_ESPUptime          "HASP Plate 35 Sensor - ESP Uptime [%d secs]"       (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor_ESPUptime"}
+Number HASP_Plate35_Plate_Sensor_HeapFree           "HASP Plate 35 Sensor - Heap Free [%d]"             (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor_HeapFree"}
+Number HASP_Plate35_Plate_Sensor_HeapFrag           "HASP Plate 35 Sensor - Heap Frag [%d]"             (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor_HeapFrag"}
+Number HASP_Plate35_Plate_Sensor_SignalStrength     "HASP Plate 35 Sensor - Signal Strength [%d dbm]"   (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor_SignalStrength"}
+Number HASP_Plate35_Plate_Sensor_NumPages           "HASP Plate 35 Sensor - Pages [%d]"                 (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor_NumPages"}
+Number HASP_Plate35_Plate_Sensor_TFTWidth           "HASP Plate 35 Sensor - LCD Width [%d]"             (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor_TFTWidth"}
+Number HASP_Plate35_Plate_Sensor_TFTHeight          "HASP Plate 35 Sensor - LCD Height [%d]"            (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor_TFTHeight"}
+String HASP_Plate35_Plate_Sensor_HaspIP             "HASP Plate 35 Sensor - HASP IP [%s]"               (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Sensor_HaspIP"}
+
+Switch HASP_Plate35_Plate_Refresh                   "HASP Plate 35 Refresh"                             (HASP) {expire="10s,command=OFF"}
+
+Number HASP_Plate35_Plate_Motion                    "HASP Plate 35 Motion Status [%d]"                  (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Motion"}
+
+String HASP_Plate35_Plate_Command                   "Hasp Plate 35 Command"                             (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Command"}
+
+String HASP_Plate35_Plate_Command_JSON              "Hasp Plate 35 JSON Command"                        (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Command_JSON"}
+String HASP_Plate35_Plate_Command_JSONL             "Hasp Plate 35 JSONL Command"                       (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_Command_JSONL"}
+
+String HASP_Plate35_Plate_State_JSON                "HASP Plate 35 JSON State"                          (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_State_JSON"}
+String HASP_Plate35_Plate_State_JSON_Event          "HASP Plate 35 JSON State Event"                    (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_State_JSON_Event"}
+String HASP_Plate35_Plate_State_JSON_Value          "HASP Plate 35 JSON State Value"                    (HASP) {channel="mqtt:topic:haspthing:HASP_Plate35_Plate_State_JSON_Value"}

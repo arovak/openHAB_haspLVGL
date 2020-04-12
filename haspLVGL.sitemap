@@ -1,0 +1,40 @@
+sitemap haspLVGL label="haspLVGL"
+{
+    Frame visibility=[HASP_Plate35_Plate_Sensor_NumPages<=4] {
+        Switch item=HASP_Plate35_Page mappings=[0="0", 1="1", 2="2", 3="3"]
+    }
+
+    Frame visibility=[HASP_Plate35_Plate_Sensor_NumPages>4]{
+        Switch item=HASP_Plate35_Page mappings=[0="0", 1="1", 2="2", 3="3", 4="4", 5="5", 6="6", 7="7", 8="8", 9="9", 10="10", 11="11"]
+    }
+
+    Text item=HASP_Plate35_Page_Current
+    Text item=HASP_Plate35_Plate_Sensor_NumPages
+    Text item=HASP_Plate35_Plate_Sensor_Status
+    Text item=HASP_Plate35_Plate_Sensor_ESPVersion
+    Text item=HASP_Plate35_Plate_Sensor_ESPUpdate
+    Text item=HASP_Plate35_Plate_Sensor_LCDVersion
+    Text item=HASP_Plate35_Plate_Sensor_ESPUptime
+    Text item=HASP_Plate35_Plate_Sensor_HaspIP
+    Text item=HASP_Plate35_Plate_Sensor_SSID icon="network"
+    Text item=HASP_Plate35_Plate_Sensor_SignalStrength icon="qualityofservice"
+    Text item=HASP_Plate35_Plate_Sensor_HeapFree
+    Text item=HASP_Plate35_Plate_Sensor_HeapFrag
+    Text item=HASP_Plate35_Plate_Sensor_TFTWidth
+    Text item=HASP_Plate35_Plate_Sensor_TFTHeight
+    Text item=HASP_Plate35_Plate_Sensor_ESPCore
+
+
+    Frame{
+        Switch item=HASP_Plate35_Plate_Refresh
+        Switch item=HASP_Plate35_Plate_Reboot
+        Switch item=HASP_Plate35_Light_Power
+        Text item=HASP_Plate35_Light_Status
+    }
+    Frame{
+        Slider item=HASP_Plate35_Light_Dimmer icon="heating-off" step=10
+        Setpoint item=HASP_Plate35_Light_Dimmer minValue=0 maxValue=100 step=10
+        Text item=HASP_Plate35_Light_Brightness
+    }
+
+}
